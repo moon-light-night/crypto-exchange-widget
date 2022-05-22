@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('./exchange.scss');
+@import url('./currencies.scss');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input {
+  outline: none;
+}
+
+.root {
+  max-width: 960px;
+  margin: 0 auto;
+  color: #282828;
+  font-family: 'Vollkorn', serif;
+  &-header {
+    margin: 0 0 60px;
+    &__title {
+      font-size: 50px;
+      line-height: 60px;  
+      margin: 0 0 16px;
+      @media(max-width: 1024px) {
+        font-size: 40px;
+        line-height: 120%;
+        margin: 0 0 14px;
+      }
+    }
+    &__subtitle {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    @media(max-width: 1024px) {
+      margin: 0 auto 60px;
+    }
+  }
+  &-footer {
+    &__title {
+      font-size: 16px;
+      line-height: 23px;
+      margin: 0 0 8px;
+    }
+    &__field {
+      background: #F6F7F8;
+      border: 1px solid #E3EBEF;
+      border-radius: 5px;
+      max-width: 723px;
+      margin: 0 32px 0 0;
+      padding: 15px;
+      width: 100%;
+      @media(max-width: 1024px) {
+        margin: 0 0 16px;
+        padding: 14px;
+      }
+    }
+    &__btn {
+      background: #11B3FE;
+      border-radius: 5px;
+      color: #fff;
+      padding: 15px 59px;
+      transition-duration: 0.1s;
+      &:hover {
+        background: #0095E0;
+      }
+    }
+    &__error {
+      position: absolute;
+      font-size: 16px;
+      line-height: 23px;
+      color: #E03F3F;
+      text-align: center;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 68px;
+      width: 100%;
+    }
+    @media(max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
+}

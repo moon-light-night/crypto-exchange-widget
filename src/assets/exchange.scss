@@ -1,0 +1,42 @@
+.exchange {
+  display: flex;
+  margin: 0 0 32px;
+  &-swap {
+    margin: 16px 30px;
+    width: 24px;
+    height: 24px;
+    @media(max-width: 1024px) {
+      margin: 16px 0 16px auto;
+      transform: rotate(90deg);
+    }
+  }
+  &-field {
+    display: flex;
+    width: 440px;
+    align-items: center;
+    background: #F6F7F8;
+    padding: 14px 16px;
+    border: 1px solid #C1D9E6;
+    border-radius: 5px;
+    @media(max-width: 1024px) {
+      width: 330px;
+    }
+    &__input {
+      width: 100%;
+      background: #F6F7F8;
+      border-right: 1px solid #E3EBEF;
+      margin: 0 36px 0 0;
+    }
+    &__img {
+      margin: 0 14px 0 0;
+    }
+    &__arrow {
+      width: 10px;
+      height: 6px;
+      background-image: url('../assets/images/arrow.svg');
+    }
+  }
+  @media(max-width: 1024px) {
+    flex-direction: column;
+  }
+}
